@@ -31,3 +31,7 @@ nav a[aria-current="page"] {
 nav a[aria-current="page"] {
     font-weight: bold;
 }
+.page-title {
+    margin: 0;
+    
+}
