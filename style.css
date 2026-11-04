@@ -31,7 +31,13 @@ nav a[aria-current="page"] {
 nav a[aria-current="page"] {
     font-weight: bold;
 }
-.page-title {
-    margin: 0;
-    
+.project-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ptext-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
