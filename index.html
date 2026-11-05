@@ -4,50 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Project Norway</title>
+    <title data-i18n="projectTitle">Project Norway</title>
 </head>
 <body>
 <nav>
     <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="index.html" aria-current="page" data-i18n="home">Home</a></li>
         <li><a href="erasmus.html">Erasmus</a></li>
-        <li><a href="aboutschools.html">About Schools</a></li>
-        <li><a href="educationsystem.html">Education System</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="cultural.html">Cultural</a></li>
+        <li><a href="aboutschools.html" data-i18n="aboutSchools">About Schools</a></li>
+        <li><a href="educationsystem.html" data-i18n="educationSystem">Education System</a></li>
+        <li><a href="projects.html" data-i18n="projects">Projects</a></li>
+        <li><a href="cultural.html" data-i18n="cultural">Cultural</a></li>
     </ul>
+    <div class="language-selector" hidden>
+        <label for="language-select" data-i18n="language">Language</label>
+        <select id="language-select" name="language">
+            <option value="en" lang="en">English</option>
+            <option value="nl" lang="nl">Nederlands</option>
+            <option value="nb" lang="nb">Norsk bokmål</option>
+        </select>
+    </div>
 </nav>
-    <h1 class="project-title">Project Norway</h1>
-    <p class="ptext-home">Welcome to our website, here we explain our journey and our collab with Erasmus+
+    <h1 class="project-title" data-i18n="projectTitle">Project Norway</h1>
+    <p class="ptext-home" data-i18n="welcome">Welcome to our website, here we explain our journey and our collab with Erasmus+
         we are a group of studens from Norway and a group of students from the Netherlands, taking turns to visit each other and learn about the diffrent cultures and education systems. If you want more information, you could access the diffrent pages through the navigation bar above.
     </p>
     <section class="photo-gallery" aria-labelledby="gallery-title">
-        <div class="slideshow" role="region" aria-roledescription="carousel" aria-label="Photos from our exchange">
-            <div class="slideshow-track" id="exchange-slides" tabindex="0" aria-label="Photo slides. Use the arrow keys to browse.">
-                <figure class="slideshow-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
-                    <!-- Replace the placeholder below with your own image, for example:
-                    <img src="images/photo-1.jpg" alt="Describe the first photo here">
-                    -->
-                    <div class="slide-placeholder">Add your first photo here</div>
+        <div class="slideshow" role="region" aria-roledescription="carousel" data-i18n-aria-roledescription="carouselRole" aria-label="Photos from our exchange" data-i18n-aria-label="exchangePhotos">
+            <div class="slideshow-track" id="exchange-slides" tabindex="0" aria-label="Photo slides. Use the arrow keys to browse." data-i18n-aria-label="photoSlides">
+                <figure class="slideshow-slide" role="group" aria-roledescription="slide" data-i18n-aria-roledescription="slideRole" aria-label="1 of 3">
+                    <img src="Koning_Willem_I_College_Den_Bosch.jpg" alt="Picture of the school in Den Bosch" data-i18n-alt="denBoschPhoto" class="slide-image">
+                    <figcaption>
+                        <strong>Koning Willem I College</strong>
+                        <span data-i18n="denBosch">Den Bosch, the Netherlands</span>
+                    </figcaption>
                 </figure>
-                <figure class="slideshow-slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
-                    <!-- Replace the placeholder with an <img> element for your second photo. -->
-                    <div class="slide-placeholder">Add your second photo here</div>
+                <figure class="slideshow-slide" role="group" aria-roledescription="slide" data-i18n-aria-roledescription="slideRole" aria-label="2 of 3">
+                    <img src="breivang.jpg" alt="Picture of the school in Norway" data-i18n-alt="norwayPhoto" class="slide-image">
+                    <figcaption>
+                        <strong>Breivang</strong>
+                        <span data-i18n="norwaySchool">The school in Norway</span>
+                    </figcaption>
                 </figure>
-                <figure class="slideshow-slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
-                    <!-- Replace the placeholder with an <img> element for your third photo. -->
-                    <div class="slide-placeholder">Add your third photo here</div>
+                <figure class="slideshow-slide" role="group" aria-roledescription="slide" data-i18n-aria-roledescription="slideRole" aria-label="3 of 3">
+                    <img src="breivang.jpg" alt="Picture of the school in Norway" data-i18n-alt="norwayPhoto" class="slide-image">
+                    <figcaption>
+                        <strong data-i18n="exchange">Our exchange</strong>
+                        <span data-i18n="exchangeDescription">Learning about each other's schools and cultures.</span>
+                    </figcaption>
                 </figure>
             </div>
             <div class="slideshow-controls" hidden>
-                <button class="slideshow-arrow" type="button" data-direction="-1" aria-label="Previous photo" aria-controls="exchange-slides" disabled>&#8592;</button>
-                <div class="slideshow-dots" aria-label="Choose a photo"></div>
-                <button class="slideshow-arrow" type="button" data-direction="1" aria-label="Next photo" aria-controls="exchange-slides">&#8594;</button>
+                <button class="slideshow-arrow" type="button" data-direction="-1" aria-label="Previous photo" data-i18n-aria-label="previousPhoto" aria-controls="exchange-slides" disabled>&#8592;</button>
+                <div class="slideshow-dots" aria-label="Choose a photo" data-i18n-aria-label="choosePhoto"></div>
+                <button class="slideshow-arrow" type="button" data-direction="1" aria-label="Next photo" data-i18n-aria-label="nextPhoto" aria-controls="exchange-slides">&#8594;</button>
             </div>
             <p class="slideshow-status" aria-live="polite" aria-atomic="true" hidden></p>
         </div>
-        <h2 id="gallery-title">Our experiences</h2>
+        <h2 id="gallery-title" data-i18n="experiences">Our experiences</h2>
     </section>
     <script src="slideshow.js" defer></script>
+    <script src="language.js" defer></script>
 </body>
 </html>

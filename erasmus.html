@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Project Norway</title>
+    <title data-i18n="projectTitle">Project Norway</title>
 </head>
 <body>
 <nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" data-i18n="home">Home</a></li>
         <li><a href="erasmus.html" aria-current="page">Erasmus</a></li>
-        <li><a href="aboutschools.html">About Schools</a></li>
-        <li><a href="educationsystem.html">Education System</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="cultural.html">Cultural</a></li>
+        <li><a href="aboutschools.html" data-i18n="aboutSchools">About Schools</a></li>
+        <li><a href="educationsystem.html" data-i18n="educationSystem">Education System</a></li>
+        <li><a href="projects.html" data-i18n="projects">Projects</a></li>
+        <li><a href="cultural.html" data-i18n="cultural">Cultural</a></li>
     </ul>
+    <div class="language-selector" hidden>
+        <label for="language-select" data-i18n="language">Language</label>
+        <select id="language-select" name="language">
+            <option value="en" lang="en">English</option>
+            <option value="nl" lang="nl">Nederlands</option>
+            <option value="nb" lang="nb">Norsk bokmål</option>
+        </select>
+    </div>
 </nav>
     <h1>Erasmus</h1>
     <p></p>
 
+    <script src="language.js" defer></script>
 </body>
 </html>

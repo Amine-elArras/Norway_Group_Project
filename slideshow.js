@@ -17,10 +17,15 @@ if (slideshow) {
 
     const dots = slides.map((slide, index) => {
         slide.setAttribute("aria-label", `${index + 1} of ${slides.length}`);
+        slide.dataset.i18nAriaLabel = "slidePosition";
+        slide.dataset.number = index + 1;
+        slide.dataset.total = slides.length;
         const button = document.createElement("button");
         button.type = "button";
         button.className = "slideshow-dot";
         button.setAttribute("aria-label", `Show photo ${index + 1}`);
+        button.dataset.i18nAriaLabel = "showPhoto";
+        button.dataset.number = index + 1;
         button.setAttribute("aria-controls", track.id);
         button.addEventListener("click", () => showSlide(index));
         dotsContainer.append(button);
