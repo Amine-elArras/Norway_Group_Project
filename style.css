@@ -37,7 +37,126 @@ nav a[aria-current="page"] {
     align-items: center;
 }
 .ptext-home {
+    box-sizing: border-box;
+    width: calc(100% - 2rem);
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff3e8;
+    border: 1px solid #FF6E00;
+    border-radius: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.photo-gallery {
+    width: calc(100% - 2rem);
+    max-width: 900px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.slideshow-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    border-radius: 16px;
+    background-color: #e5e5e5;
+    scrollbar-width: thin;
+    scrollbar-color: #FF6E00 #e5e5e5;
+}
+
+.slideshow-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    aspect-ratio: 16 / 9;
+    margin: 0;
+    scroll-snap-align: start;
+}
+
+.slideshow-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-placeholder {
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 1.5rem;
+    color: #454545;
+    font-size: 1.25rem;
+}
+
+.slideshow-controls {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.slideshow-controls[hidden] {
+    display: none;
+}
+
+.slideshow-arrow {
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #FF6E00;
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.slideshow-arrow:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.slideshow-dots {
+    display: flex;
+}
+
+.slideshow-dot {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.slideshow-dot::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #b3b3b3;
+}
+
+.slideshow-dot[aria-pressed="true"]::before {
+    background-color: #FF6E00;
+}
+
+.slideshow button:focus-visible,
+.slideshow-track:focus-visible {
+    outline: 3px solid #1a1a1a;
+    outline-offset: 3px;
+}
+
+.slideshow-status {
+    margin: 0.5rem 0;
+    color: #454545;
+}
+
+.photo-gallery h2 {
+    margin: 1.5rem 0 0;
 }

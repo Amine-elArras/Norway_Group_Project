@@ -21,5 +21,33 @@
     <p class="ptext-home">Welcome to our website, here we explain our journey and our collab with Erasmus+
         we are a group of studens from Norway and a group of students from the Netherlands, taking turns to visit each other and learn about the diffrent cultures and education systems. If you want more information, you could access the diffrent pages through the navigation bar above.
     </p>
+    <section class="photo-gallery" aria-labelledby="gallery-title">
+        <div class="slideshow" role="region" aria-roledescription="carousel" aria-label="Photos from our exchange">
+            <div class="slideshow-track" id="exchange-slides" tabindex="0" aria-label="Photo slides. Use the arrow keys to browse.">
+                <figure class="slideshow-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                    <!-- Replace the placeholder below with your own image, for example:
+                    <img src="images/photo-1.jpg" alt="Describe the first photo here">
+                    -->
+                    <div class="slide-placeholder">Add your first photo here</div>
+                </figure>
+                <figure class="slideshow-slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+                    <!-- Replace the placeholder with an <img> element for your second photo. -->
+                    <div class="slide-placeholder">Add your second photo here</div>
+                </figure>
+                <figure class="slideshow-slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+                    <!-- Replace the placeholder with an <img> element for your third photo. -->
+                    <div class="slide-placeholder">Add your third photo here</div>
+                </figure>
+            </div>
+            <div class="slideshow-controls" hidden>
+                <button class="slideshow-arrow" type="button" data-direction="-1" aria-label="Previous photo" aria-controls="exchange-slides" disabled>&#8592;</button>
+                <div class="slideshow-dots" aria-label="Choose a photo"></div>
+                <button class="slideshow-arrow" type="button" data-direction="1" aria-label="Next photo" aria-controls="exchange-slides">&#8594;</button>
+            </div>
+            <p class="slideshow-status" aria-live="polite" aria-atomic="true" hidden></p>
+        </div>
+        <h2 id="gallery-title">Our experiences</h2>
+    </section>
+    <script src="slideshow.js" defer></script>
 </body>
 </html>
